@@ -15,7 +15,7 @@ from nltk.corpus import stopwords
 nltk.download('stopwords')
 
 # Load the dataset
-data_path = 'app/data/spam.csv'  # Relative path assuming you're running from root directory
+data_path = 'data/spam.csv'  # Relative path assuming you're running from root directory
 data = pd.read_csv(data_path, encoding='latin-1')[['v1', 'v2']]
 data.columns = ['label', 'message']
 data['label'] = data['label'].map({'ham': 0, 'spam': 1})
